@@ -12,7 +12,7 @@ typedef struct Node list;
 
 Nodeptr getnode() {
     Nodeptr head;
-    head = (Nodeptr)malloc(sizeof(int));
+    head = (Nodeptr)malloc(sizeof(struct Node));
     return head;
 }
 

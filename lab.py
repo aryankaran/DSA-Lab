@@ -44,3 +44,15 @@ m = 5
 y = ++m + m++
 
 print(m, y)
+
+
+
+'''Date: Sep 25
+
+LIst
+'''
+
+l=(1,2,3,4)
+print(l)
+print(l[3])
+

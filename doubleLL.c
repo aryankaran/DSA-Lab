@@ -92,31 +92,33 @@ Nodeptr Insert_any_position(list* head, int pos) {
 
     Nodeptr p = getnode(), q, r;
 
+    // no dangling pointers
+    p->next = NULL;
+    p->previous = NULL;
 
     if (head == NULL && pos != 1) {
         printf("Empty List & inserting beyond first pos !!!\n");
         return head;
     }
 
-
-    q = head->next;
+    q = head;
+    // r = q;
     while (--pos && q != NULL) {
         r = q;
         q = q->next;
     }
 
-
     
-    
-    if (q != head){
+    if (q != NULL){
         p->next = q;
+        p->previous = r;
+        r->next = p;
+        q->previous = p; 
 
         // Get data only if in between
-        // p = getnode();
         printf("Enter Data: ");
         scanf("%d", &p->data);
 
-        r->next = p;
     } else {
         // Check out of list , i.e beyond head as q != head checked
         if (pos > 0) {
@@ -319,7 +321,7 @@ int main() {
                 printf("Enter the postition: ");
                 scanf("%d", &pos);
 
-                head = InsertBetween(head, pos);
+                head = Insert_any_position(head, pos);
                 break;
 
             case 6:

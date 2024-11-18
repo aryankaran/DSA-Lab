@@ -24,64 +24,30 @@ Nodeptr getnode() {
     return head;
 }
 
-Nodeptr InsertBegin(dblist* head) {
+Nodeptr InsertBegin(list * head) {
     Nodeptr p = getnode();
     // Data
     printf("Enter data: ");
     scanf("%d", &p->data);
 
-    p->previous = NULL;
     if (head != NULL) {
-        head->previous = p;
-        p->next = head;
-        head = p;
+        p->next = head->next;
+        head->next = p;
     } else {
         head = p;
-        return head;
+        p->next = p;
     }
-}
-
-Nodeptr InsertEnd(dblist* head) {
-    Nodeptr p = getnode(), q;
-    // Data
-    printf("Enter data: ");
-    scanf("%d", &p->data);
-    p->next = NULL;
-
-    q = head;
-
-    if (head != NULL) {
-        // traverse to end
-        while (q->next != NULL) {
-            q = q->next;
-        }
-
-        // attach at the end
-        q->next = p;
-        p->previous = q;
 
     return head;
-
-    } else {
-        head = p;
-        return head;
-    }
 }
 
 
-/*
-Nodeptr InsertAnyPos(Nodeptr head, int pos) {
-    Nodeptr p = getnode();
-    // Data
-    scanf("%d", &p->data);
+Nodeptr InsertEnd(list* head) {
+    head = InsertBegin(head);
+    head = head->next;
 
-    Nodeptr q = head;
-
-    while (--pos && q != NULL) {
-        q = q->next;
-    }
+    return head;
 }
-*/
 
 
 Nodeptr Insert_any_position(list* head, int pos) {
@@ -90,35 +56,24 @@ Nodeptr Insert_any_position(list* head, int pos) {
         return head;
     }
 
-    Nodeptr p = getnode(), q, r;
+    Nodeptr p, q, r;
 
-    // no dangling pointers
-    p->next = NULL;
-    p->previous = NULL;
 
-    if (head == NULL && pos != 1) {
-        printf("Empty List & inserting beyond first pos !!!\n");
-        return head;
-    }
-
-    q = head;
-    // r = q;
-    while (--pos && q != NULL) {
+    q = head->next;
+    while (--pos && q != head) {
         r = q;
         q = q->next;
     }
 
-
-    if (q != NULL){
+    if (q != head){
         p->next = q;
-        p->previous = r;
-        r->next = p;
-        q->previous = p; 
 
         // Get data only if in between
+        p = getnode();
         printf("Enter Data: ");
         scanf("%d", &p->data);
 
+        r->next = p;
     } else {
         // Check out of list , i.e beyond head as q != head checked
         if (pos > 0) {
@@ -132,57 +87,62 @@ Nodeptr Insert_any_position(list* head, int pos) {
 }
 
 
+Nodeptr InsertBetween(Nodeptr head, int pos) {
+    Nodeptr p = getnode();
+    // Data
+    scanf("%d", &p->data);
 
-list* createlist() {
+    Nodeptr q = head;
+
+    while (--pos && q != NULL) {
+        q = q->next;
+    }
+}
+
+
+list *createlist() {
     Nodeptr head = NULL, p, q;
     int choice = 1;
     while (choice == 1) {
         p = getnode();
         printf("Enter data: ");
         scanf("%d", &p->data);
-        p->next = NULL;
 
         if (head == NULL) {
             head = p;
             q = p;
-            head->previous = NULL;
+            p->next = p;
         } else {
             q->next = p;
-            p->previous = q;
             q = p;
+            q->next = head;
         }
-
         printf("Press 1 to enter next data or 2 to exit: ");
         scanf("%d", &choice);
     }
+
+    head = q;
     return head;
 }
+
 
 void displaylist(list* head) {
     if (head == NULL) {
         printf("Empty list\n");
     } else {
-        list *p = head, *q;
-
-        printf("Forward: ");
-        while (p != NULL) {
+        list *p = head->next;
+        while (p != head) {
             printf("%d->", p->data);
-            q = p;
             p = p->next;
         }
-        printf("NULL\n");
-
-        printf("Reverse: ");
-        while (q != NULL) {
-            printf("%d->", q->data);
-            q = q->previous;
-        }
-        printf("NULL\n");
+        printf("%d--->%d\n", head->data, head->next->data);
+        // printf("%d-\n↑---⤴\n", head->data);
     }
 }
 
 
-// Redundant
+
+
 list* deleteEndNode(list* head) {
     Nodeptr p = head;
     Nodeptr r;
@@ -194,29 +154,20 @@ list* deleteEndNode(list* head) {
     free(p);
 }
 
-
-
-
 Nodeptr delBegin(Nodeptr head) {
     Nodeptr p = head;
-    head = p->next;
-    head->previous = NULL;
-
-    // Display data being deleted
-    printf("Deleting data: %d\n", p->data);
-    free(p);
-
-    return head;
+    
 }
 
-
 Nodeptr delNode(Nodeptr head, int pos) {
-    list *p = head, *r;
+    list * p = head, *r;
 
+/* TODO: delBegin function
     if (pos == 1) {
-        head = delBegin(head);
+        head = deleteBegin(head);
         return head;
     }
+*/
 
     while (--pos && p != NULL) {
         r = p;
@@ -225,8 +176,7 @@ Nodeptr delNode(Nodeptr head, int pos) {
 
     if (p != NULL) {
         r->next = p->next;
-        (p->next)->previous = r;
-
+        
         // Display deleting data
         printf("Deleting data: %d\n", p->data);
         free(p);
@@ -235,48 +185,26 @@ Nodeptr delNode(Nodeptr head, int pos) {
 }
 
 
-
-// Single :->
-
-// Nodeptr delNode(Nodeptr head, int pos) {
-//     list *p = head, *r;
-
-//     /* TODO: delBegin function
-//         if (pos == 1) {
-//             head = deleteBegin(head);
-//             return head;
-//         }
-//     */
-
-//     while (--pos && p != NULL) {
-//         r = p;
-//         p = p->next;
-//     }
-
-//     if (p != NULL) {
-//         r->next = p->next;
-
-//         // Display deleting data
-//         printf("Deleting data: %d\n", p->data);
-//         free(p);
-//     }
-//     return head;
-// }
-
-
-
 list* concatList(list* head1, list* head2) {
     if (head1 != NULL && head2 != NULL) {
-        Nodeptr p = head1;
+        
+        Nodeptr p = head1->next;
+        head1->next = head2->next;
+        head2->next = p;
 
+        return head2;
+    }
+/*
         while (p->next != NULL) {
             p = p->next;
         }
 
         p->next = head2;
-        head2->previous = p;
         return head1;
+
     }
+*/
+
 
     if (head2 != NULL) {
         return head2;
@@ -288,19 +216,22 @@ list* concatList(list* head1, list* head2) {
     }
 }
 
+
 list* bubbleSort(list* head) {
     for (list* p = head; p->next != NULL; p = p->next) {
         for (list* q = p->next; q != NULL; q = q->next) {
             if (p->data > q->data) {
-                // swap
+                //swap
                 int temp = p->data;
-                p->data = q->data;
+                p->data = q ->data;
                 q->data = temp;
             }
         }
     }
     return head;
 }
+
+
 
 list* reverseList(list* head) {
     Nodeptr p, q, r;
@@ -317,6 +248,7 @@ list* reverseList(list* head) {
     head = q;
     return head;
 }
+
 
 list* linearSearch(list* head, int n) {
     list* p = head;
@@ -338,23 +270,12 @@ list* linearSearch(list* head, int n) {
     return head;
 }
 
-int guard(Nodeptr head) {
-    if (head == NULL) {
-        printf("Can't operate on an empty list !!! \n");
-        return 1;
-    }
-    return 0;
-}
-
 
 int main() {
-    list* head = NULL;
+    list *head = NULL;
     int choice, pos;
     while (1) {
-        printf("1. Create list\n2. Display list\n3. Insert at any postion \n4. Delete a certain node \n5. Concatenate two lists \n6. Sort \n7. Reverse List \n8. Search \n9. Exit\n");
-/*
-4. Insert at beginning\n5. Insert at end \n
-*/
+        printf("1. Create list\n2. Display list\n3. Insert at Beginning \n4. Insert at End \n5. Insert between \n6. Delete a certain node \n7. Concatenate two lists \n8. Sort \n9. Reverse List \n10. Search \n11. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         switch (choice) {
@@ -365,71 +286,61 @@ int main() {
             case 2:
                 displaylist(head);
                 break;
-/*
-            case 4:
+
+            case 3:
                 head = InsertBegin(head);
                 break;
 
-            case 5:
+            case 4:
                 head = InsertEnd(head);
                 break;
-*/
-            case 3:
+
+            case 5:
                 printf("Enter the postition: ");
                 scanf("%d", &pos);
 
                 head = Insert_any_position(head, pos);
                 break;
 
-            case 4:
-                if ( guard(head) )  break;
-
+            case 6:
                 // Get node position
                 printf("Enter node position to delete: ");
                 scanf("%d", &pos);
 
-                printf("Original List:-> \n");
-                displaylist(head);
                 head = delNode(head, pos);
-                printf("Updated List:-> \n");
+                printf("Updated List: ");
                 displaylist(head);
                 break;
 
-            case 5:
+            case 7:
                 printf("Enter 1st List data:-> \n");
                 list* head1 = createlist();
                 printf("Enter 2nd List data:-> \n");
                 list* head2 = createlist();
 
-                printf("List 1:-> \n");
+                printf("List 1: ");
                 displaylist(head1);
 
-                printf("List 2:-> \n");
+                printf("List 2: ");
                 displaylist(head2);
 
                 head = concatList(head1, head2);
-                printf("Combined list:-> \n");
-                displaylist(head);
-                break;
-
-            case 6:
-                if ( guard(head) )  break;
-
-                head = bubbleSort(head);
-                displaylist(head);
-                break;
-
-            case 7:
-                if ( guard(head) )  break;
-
-                head = reverseList(head);
-                printf("Reversed List:-> \n");
+                printf("Combined list: ");
                 displaylist(head);
                 break;
 
             case 8:
-                if ( guard(head) )  break;
+                head = bubbleSort(head);
+                displaylist(head);
+                break;
 
+            case 9:
+                head = reverseList(head);
+                printf("Reversed List: ");
+                displaylist(head);
+                break;
+
+            case 10:
                 int n;
                 printf("eNter data to search: ");
                 scanf("%d", &n);
@@ -437,7 +348,7 @@ int main() {
                 linearSearch(head, n);
                 break;
 
-            case 9:
+            case 11:
                 return 0;
 
             default:
@@ -448,26 +359,9 @@ int main() {
 
 
 
-
 /*
-- DLL done  ✅
-- Circular DLL
-
-- Insert
-- Delete 
-- Concat
-
-- Circular DLL
-
-Array :->
-- Quick sort
-Merge Sort
-Radix sort
-
-
-Tree :-
-- Insert
-- Display, Inorder : usccesssor, Preorder, postorder, infix, postfix
-- delete node from tree : child (left, right)
-
+Puja HW :->
+1. Sort a circular linked list
+2. Searching an element
+3. reversing c.l.l.
 */

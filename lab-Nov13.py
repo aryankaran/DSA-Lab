@@ -21,5 +21,3 @@ tup = tuple(set_s1)
 print("Tuple:->", tup)
 
 tup.count
-
-

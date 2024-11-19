@@ -1,0 +1,3 @@
+The first three items are: ['Pizza', 'cake', 'Sushi']
+Three items from the middle are: ['cake', 'Sushi', 'Burger']
+The last three items are: ['Burger', 'Ice cream', 'Pasta']

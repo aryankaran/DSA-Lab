@@ -1,0 +1,11 @@
+My favorite pizzas are:
+- Margherita
+- Cheesy
+- Hawaiian
+- Pepperoni
+
+My friend's favorite pizzas are:
+- Margherita
+- Cheesy
+- Hawaiian
+- Mushroom

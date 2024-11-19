@@ -1,0 +1,26 @@
+Original order:
+['London', 'Washington D.C.', 'Tokyo', 'Paris', 'Arizona']
+
+Alphabetical:
+['Arizona', 'London', 'Paris', 'Tokyo', 'Washington D.C.']
+
+Original order again:
+['London', 'Washington D.C.', 'Tokyo', 'Paris', 'Arizona']
+
+Reverse alphabetical:
+['Washington D.C.', 'Tokyo', 'Paris', 'London', 'Arizona']
+
+Original order again:
+['London', 'Washington D.C.', 'Tokyo', 'Paris', 'Arizona']
+
+Reversed:
+['Arizona', 'Paris', 'Tokyo', 'Washington D.C.', 'London']
+
+Original order:
+['London', 'Washington D.C.', 'Tokyo', 'Paris', 'Arizona']
+
+Sorted alphabetically:
+['Arizona', 'London', 'Paris', 'Tokyo', 'Washington D.C.']
+
+Sorted reverse alphabetically:
+['Washington D.C.', 'Tokyo', 'Paris', 'London', 'Arizona']

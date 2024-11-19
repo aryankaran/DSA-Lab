@@ -1,0 +1,15 @@
+
+Original menu:
+Pasta, Salad, Bread, Tomato Soup, Fruits, 
+
+
+Error when updating tuple:
+Traceback (most recent call last):
+  File "/home/aryan/Desktop/lab-Sem3/lab/workshop-assign/4-13.py", line 10, in <module>
+    basic_foods[0] = "Rice"  # will cause error as immutable
+    ~~~~~~~~~~~^^^
+TypeError: 'tuple' object does not support item assignment
+
+
+Revised menu:
+Rice, Salad, Bread, Tomato Soup, Fruits, 

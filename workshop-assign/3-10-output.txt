@@ -1,0 +1,8 @@
+['Python', 'Ruby', 'Typescript', 'JavaScript', 'C', 'Java', 'C#']
+Go
+['C', 'C#', 'JavaScript', 'Ruby', 'Swift', 'Typescript']
+['Typescript', 'Swift', 'Ruby', 'JavaScript', 'C#', 'C']
+['C', 'C#', 'JavaScript', 'Ruby', 'Swift', 'Typescript']
+['Typescript', 'Swift', 'Ruby', 'JavaScript', 'C#', 'C']
+['C', 'C#', 'JavaScript', 'Ruby', 'Swift', 'Typescript']
+6

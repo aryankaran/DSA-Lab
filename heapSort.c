@@ -9,10 +9,10 @@ void printArray(int arr[], int n) {
     printf("\n");
 }
 
-void swap(int *e, int *f) {
-    int x = *e;
-    *e = *f;
-    *f = x;
+void swap(int *a, int *b) {
+    int x = *a;
+    *a = *b;
+    *b = x;
 }
 
 void createHeap(int arr[], int n, int i) {

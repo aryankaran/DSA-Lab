@@ -62,11 +62,50 @@ Nodeptr createBST() {
         // exiting loop
         printf("Press 1 to enter next data or 0 to exit: ");
         scanf("%d", &choice);
-        // printf("%d", choi)
+        // printf("%d", choice)
     }
 
     return Tree;
 }
+
+
+void deleteBST(Nodeptr Tree, int element) {
+    Nodeptr x = Tree;
+    Nodeptr y = NULL;
+
+    // searching
+    while (x != NULL) {
+        y = x;
+
+        if (element < x->data) {
+            x = x->left;
+        } else if (element < x->data) {
+                    x = x->left;
+                } else if (element != x->data) {
+                        printf("Element: %d not found in Tree\n", element);
+                        return 0;
+                    }
+
+
+        // Case I
+        if (x->left )
+
+
+
+
+    // Nodeptr y = NULL;
+    // Nodeptr x = Tree;
+
+    while (x != NULL) {
+        y = x;
+
+        if (z->data)
+    }
+
+
+}
+
+
 
 /*
 inode(Nodeptr Tree) {
@@ -104,6 +143,10 @@ void printBST_VLR(Nodeptr Tree) {
     }
 }
 
+
+
+
+
 int main() {
     Nodeptr Tree = createBST();
     printf("\n");
@@ -118,5 +161,18 @@ int main() {
     printf("Tree in VLR: ");
     printBST_VLR(Tree);
     printf("\n");
+
+    int element;
+    printf("Enter element to delete: ");
+    scanf("%d", &element);
+    // z = getnode();
+    // z->data = element;
+    deleteBST(Tree, element);
+
+    printf("Tree in LVR  after deletion: ");
+    printBST_LVR(Tree);
+    printf("\n");
+
+
     return 0;
 }

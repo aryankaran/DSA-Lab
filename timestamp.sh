@@ -17,5 +17,5 @@ for date in $dates; do
   find . -type f -not -path "./.git/*" -newermt "$date 00:00:00" ! -newermt "$date 23:59:59" -exec git add {} +
 
   # Set GIT_COMMITTER_DATE to the latest timestamp and commit
-  GIT_COMMITTER_DATE="@$latest_timestamp" git commit -m "Lab @ $datetime"
+  GIT_AUTHOR_DATE="@$latest_timestamp" GIT_COMMITTER_DATE="@$latest_timestamp" git commit -e -m "Lab @ $datetime"
 done

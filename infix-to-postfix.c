@@ -53,15 +53,16 @@ char pop(char stack[], int* top){
 }
 
 
-void in_to_post(char expr[]) {
+void in_to_post(char expr[], char post[]) {
     printf("Expression: %s\n", expr);
 
     char stack[MAXSIZE]; // intermediate array as stack
-    int top = -1;
+    int top = -1, post_index = 0;
 
     for (int i = 0; expr[i] != '\0'; i++) {
         if (is_operand(expr[i])) {
-            printf("%c", expr[i]);
+            // printf("%c", expr[i]);
+            post[post_index++] = expr[i];
 
         } else if (expr[i] == '(') {
             // opening paranthesis case
@@ -71,7 +72,8 @@ void in_to_post(char expr[]) {
             // closing paranthesis, then pop till opening comes in
             while (stack[top] != '(') {
                 char y = pop(stack, &top);
-                printf("%c", y);
+                // printf("%c", y);
+                post[post_index++] = y;
             }
             
             // pop out the '(' from stack before proceeding
@@ -79,7 +81,9 @@ void in_to_post(char expr[]) {
             
         } else { // other operator handling
             while (priority(stack[top]) >= priority(expr[i])) {
-                printf("%c", pop(stack, &top)); // pop & print until stack[top] has lower prior then expr[i]
+                char y = pop(stack, &top);
+                // printf("%c", y); // pop & print until stack[top] has lower prior then expr[i]
+                post[post_index++] = y;
             }
             push(stack, &top, MAXSIZE, expr[i]);
         }
@@ -87,10 +91,12 @@ void in_to_post(char expr[]) {
 
     // remaining operators if any
     while (top > -1) {
-        printf("%c", pop(stack, &top));
+        char y = pop(stack, &top);
+        // printf("%c", y);
+        post[post_index++] = y;
     }
 
-    printf("\n");
+    // printf("\n");
 
 /*
     printf("Expression line by line: \n");
@@ -102,10 +108,14 @@ void in_to_post(char expr[]) {
 }
 
 int main() {
-    char expr[MAXSIZE];
+    char expr[MAXSIZE], post[MAXSIZE];
     printf("Enter expression: ");
     scanf("%[^\n]", expr);
-    in_to_post(expr);
+    in_to_post(expr, post);
+
+    printf("Postfix expression: %s\n", post);
+    char expr_reverse[MAXSIZE];
+    
 
 /*
     int top = -1;

@@ -49,7 +49,7 @@ char pop(char stack[], int* top){
     }
 
     // (*top)--;
-    return stack[(*top)--]; // return popped pointer
+    return stack[(*top)--]; // return popped element
 }
 
 

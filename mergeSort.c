@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
-
+    
 
 void printArray(int arr[], int n){
     for (int i = 0; i < n ; i++) {
@@ -25,7 +24,6 @@ void merge(int arr[], int p, int q, int r) {
         right[j] = arr[q + 1 + j];
     }
 
-    // for (k = p; k <= r ; k++) {
     int i = 0, j = 0, k = p;
     while (i < n1 && j < n2) {
         if (left[i] <= right[j]) {

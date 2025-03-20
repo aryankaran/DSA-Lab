@@ -12,7 +12,7 @@ typedef struct Node list;
 
 Nodeptr getnode() {
     Nodeptr head;
-    head = (Nodeptr)malloc(sizeof(int));
+    head = (Nodeptr)malloc(sizeof(list));
     return head;
 }
 
@@ -28,7 +28,7 @@ Nodeptr InsertBegin(list * head) {
         head->next = p;
     } else {
         head = p;
-        p->next = p;
+        p->next = p; // linkback to itself
     }
 
     return head;
@@ -236,7 +236,7 @@ list* reverseList(list* head) {
         q = p;
         p = p->next;
         q->next = r;
-    }
+    }	
 
     head = q;
     return head;
@@ -262,7 +262,8 @@ list* linearSearch(list* head, int n) {
 
     return head;
 }
-
+Nodeptr createlist() {
+    )
 
 int main() {
     list *head = NULL;

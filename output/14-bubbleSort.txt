@@ -1,0 +1,10 @@
+Enter size of array: 6
+Enter element no. 1: 23
+Enter element no. 2: 12
+Enter element no. 3: 43
+Enter element no. 4: 12
+Enter element no. 5: 4
+Enter element no. 6: 23
+
+Sorted list:
+4 12 12 23 23 43 

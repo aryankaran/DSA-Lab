@@ -1,0 +1,3 @@
+Enter number of elements: 6
+Enter elements: 34 783 46 235 47 12
+Sorted array: : 12 34 46 47 235 783 

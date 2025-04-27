@@ -1,0 +1,4 @@
+Enter no. of elements: 5
+Enter the list of numbers: 56 12 43 875 12
+Original array: 56 12 43 875 12 
+Sorted   array: 12 12 43 56 875 

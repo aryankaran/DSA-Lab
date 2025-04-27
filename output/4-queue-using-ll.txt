@@ -1,0 +1,67 @@
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 1
+Enter element: 43
+Inserted element: 43
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 1
+Enter element: 65
+Inserted element: 65
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 1
+Enter element: 12
+Inserted element: 12
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 1
+Enter element: 87
+Inserted element: 87
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 3
+Queue: 43 65 12 87 
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 2
+Removed element: 43
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 3
+Queue: 65 12 87 
+
+1. Insert an element.
+2. Delete an element.
+3. Display queue.
+4. Exit
+
+Enter your choice: 4

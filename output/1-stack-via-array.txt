@@ -1,0 +1,81 @@
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 1
+
+Enter an integer: 43
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 1
+
+Enter an integer: 56
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 1
+
+Enter an integer: 45
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 3
+
+45 56 43 
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 2
+
+Popped value: 45
+
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 3
+
+56 43 
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 2
+
+Popped value: 56
+
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 3
+
+43 
+
+Enter a choice :
+1. Push
+2. Pop an element
+3. Display the stack
+4. Exit menu
+Enter a choice: 
+

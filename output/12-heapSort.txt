@@ -1,3 +1,0 @@
-Enter number of elements: 6
-Enter elements: 673 23 12 263 124 2
-Sorted array: 2 12 23 124 263 673 

@@ -1,3 +1,0 @@
-Enter expression: A+(B-C+D/E*(F+H-J)*K-L+N)-R
-Expression: A+(B-C+D/E*(F+H-J)*K-L+N)-R
-Postfix expression: ABC-DE/FH+J-*K*+L-N++R-

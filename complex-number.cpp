@@ -55,7 +55,7 @@ void Complex::display(){
                 cout << '+';
             }
             cout << img << 'i' << endl;
-
+            
         } else {
             cout << img << 'i' << endl;
         }
@@ -80,8 +80,7 @@ Complex Complex::sub(Complex c2){
 
 
 Complex Complex::mul(Complex c2){
-    Complex temp;// /*
-
+    Complex temp;
 
     temp.real = real * c2.real - img * c2.img;
     temp.img = real * c2.img + img * c2.real;

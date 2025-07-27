@@ -42,9 +42,10 @@ String String::operator+(String S2) {
     }
 
     int len2 = 0;
-    while (data[len2] != '\0') {
+    while (S2.data[len2] != '\0') {
         temp.data[len++] = S2.data[len2++];
     }
+    temp.data[len] = '\0'; // Null-terminate the concatenated string
     
 
     // debug 

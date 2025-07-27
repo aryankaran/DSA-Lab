@@ -70,6 +70,8 @@ int main() {
             case 2: {
                 int pop = stack.pop();
                 cout << "Popped element: " << pop << endl;
+                cout << "Stack after pop: ";
+                stack.display();
                 break;
             }
             

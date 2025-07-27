@@ -1,0 +1,43 @@
+--- Abridged Stack Demonstration ---
+1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: Enter element: 1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: Enter element: 1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: 10 20 
+1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: Popped element: 20
+Stack after pop: 10 
+1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: 10 
+1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: Popped element: 10
+Stack after pop: Empty stack !!!
+1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: Stack is empty
+Popped element: 0
+Stack after pop: Empty stack !!!
+1. Push 
+2. Pop 
+3. Display 
+4. Exit
+Enter choice: 

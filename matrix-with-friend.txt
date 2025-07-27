@@ -1,0 +1,65 @@
+--- Example 1: All operations valid (3x3 matrices) ---
+Enter 1st matrix: 
+Enter no. of rows and columns: 
+Row 0: Row 1: Row 2: 
+Enter 2nd matrix: 
+Enter no. of rows and columns: 
+Row 0: Row 1: Row 2: 
+Matrix 1:-> 
+1 1 1 
+2 2 2 
+3 3 3 
+
+Matrix 2:-> 
+9 9 9 
+8 8 8 
+7 7 7 
+
+Addition :-> 
+10 10 10 
+10 10 10 
+10 10 10 
+
+Substraction :-> 
+-8 -8 -8 
+-6 -6 -6 
+-4 -4 -4 
+
+Multiplicatiuon :-> 
+24 24 24 
+48 48 48 
+72 72 72 
+
+
+
+
+--- Example 2: Mul valid, Add/Sub invalid (2x3 and 3x2) ---
+Enter 1st matrix: 
+Enter no. of rows and columns: 
+Row 0: Row 1: 
+Enter 2nd matrix: 
+Enter no. of rows and columns: 
+Row 0: Row 1: Row 2: 
+Matrix size mismatch
+Matrix size mismatch
+Matrix 1:-> 
+1 2 3 
+4 5 6 
+
+Matrix 2:-> 
+7 8 
+9 1 
+2 3 
+
+Addition :-> 
+8 10 59 
+13 6 1070548734 
+
+Substraction :-> 
+-6 -6 -53 
+-5 4 -1070548722 
+
+Multiplicatiuon :-> 
+31 19 
+85 55 
+

@@ -1,0 +1,59 @@
+--- Example 1: All operations valid (2x2 matrices) ---
+Enter 1st matrix: 
+Enter rows and columns: 
+Row 0: Row 1: 
+Enter 2nd matrix: 
+Enter rows and columns: 
+Row 0: Row 1: 
+Matrix 1:-> 
+1 2 
+3 4 
+
+Matrix 2:-> 
+5 6 
+7 8 
+
+Addition :-> 
+6 8 
+10 12 
+
+Substraction :-> 
+-4 -4 
+-4 -4 
+
+Multiplicatiuon :-> 
+19 22 
+43 50 
+
+
+
+
+--- Example 2: Add/Sub valid, Mul invalid (two 2x3 matrices) ---
+Enter 1st matrix: 
+Enter rows and columns: 
+Row 0: Row 1: 
+Enter 2nd matrix: 
+Enter rows and columns: 
+Row 0: Row 1: 
+Matrix multiplication not possible,
+ M1.columns != M2.rows
+Matrix 1:-> 
+1 2 3 
+4 5 6 
+
+Matrix 2:-> 
+7 8 9 
+1 2 3 
+
+Addition :-> 
+8 10 12 
+5 7 9 
+
+Substraction :-> 
+-6 -6 -6 
+3 3 3 
+
+Multiplicatiuon :-> 
+-229519631 98031 -229378661 
+-459039247 196080 -458757301 
+

@@ -1,0 +1,27 @@
+--- Example 1: Standard complex numbers (10+2i and 5+8i) ---
+Enter 1st complex number:->
+Real: Imaginary: 
+Enter 2nd complex number:->
+Real: Imaginary: 
+1st complex number: 10+2i
+2nd complex number: 5+8i
+
+Addition: 15+10i
+Substraction: 5-6i
+Multiplication: 34+90i
+Division: 0.741573-0.786517i
+
+
+
+--- Example 2: Numbers with negative parts (-4-2i and 3-7i) ---
+Enter 1st complex number:->
+Real: Imaginary: 
+Enter 2nd complex number:->
+Real: Imaginary: 
+1st complex number: -4-2i
+2nd complex number: 3-7i
+
+Addition: -1-9i
+Substraction: -7+5i
+Multiplication: -26+22i
+Division: 0.0344828-0.586207i

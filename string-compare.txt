@@ -1,0 +1,9 @@
+--- Example 1: Equal strings ('hello' and 'hello') ---
+ Enter 1st string:  Enter 2nd string: Equal strings
+Concatenated: hellohello
+
+
+
+--- Example 2: Unequal strings ('hello' and 'world') ---
+ Enter 1st string:  Enter 2nd string: Unequal strings
+Concatenated: helloworld

@@ -1,0 +1,97 @@
+--- Abridged Linked List Demonstration ---
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: Enter data to append: Current list: 10 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: Enter data to append: Current list: 10 -> 30 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: 10 -> 30 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: Enter data to insert: Enter position: Current list: 10 -> 20 -> 30 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: 10 -> 20 -> 30 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: Enter position to delete: Current list: 20 -> 30 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: 20 -> 30 -> NULL
+
+--- Linear Linked List Menu ---
+1. Append (add to end)
+2. Insert at position
+3. Delete from position
+4. Display list
+5. Sort list
+6. Reverse list
+7. Search for element
+8. Concatenate with a new list
+9. Exit
+Enter your choice: Exiting.
